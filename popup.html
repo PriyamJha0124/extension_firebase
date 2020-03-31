@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="./popup.css">
+  <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-database.js"></script>
+</head>
+
+<body class="bg">
+  <div >
+    <div id="titleBar">
+      <h3>Relay Auto Refresher/Booker</h3>
+      <button id="logout" class="stop">Logout</button>
+    </div>
+    <hr />
+    <div class="d-flex">
+          <h2 for="refreshInterval">Refresh Rate </h2>
+        <select id="refreshInterval" class="ddMenu">
+          <option value="0.2">1/5</option>
+          <option value="0.5">1/2</option>
+          <option value="1" selected>1</option>
+          <option value="2"> 2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+        </select>
+        
+    </div>
+    <hr />
+    
+    
+      <div class="d-flex">
+      <h1>Autobook</h1>
+       
+        <div class="switch light-switch">
+          <input type="checkbox" class="toggle" id="dabox" />
+          <label for="dabox"></label>
+          
+         </div>
+      
+
+      </div>
+           <h3>Warning! Make sure to set all filters correctly before enable autobook.</h3>
+    
+    
+    <h4 id='status'>Loading...</h4>
+    <hr />
+    <span>
+      <button id="start" class="start">Start</button>
+      <button id="stop" class="stop">Stop</button>
+    </span>
+
+  
+  <script src="popup.js" type='module'></script>
+</body>
+
+</html>

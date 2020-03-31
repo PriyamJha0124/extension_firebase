@@ -1,0 +1,253 @@
+#titleBar {
+	display: flex;
+	justify-content: space-between;
+}
+.start{
+	background-color: none;
+	/* Green */
+	border: 2px solid green;
+    color: green;
+	height: 30px;
+	width: 100px;
+	border-radius: 60px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	transition-duration: 0.4s;
+	cursor: pointer;
+  margin-left: 15px;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+.start:hover {
+	background-color: green;
+    border: none;
+    color: white;
+    
+}
+
+.stop{
+	background-color: none;
+	border: 2px solid red;
+	color: red;
+	height: 30px;
+	width: 100px;
+	border-radius: 60px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	transition-duration: 0.4s;
+	cursor: pointer;
+  margin-left: 10px;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+.stop:hover {
+	background-color: red;
+    border: none;
+    color: white;
+}
+
+.bg {
+	width: 240px;
+	height: 240px;
+	align-items: center;
+	justify-content: center;
+	background-color: rgb(29, 28, 28);
+	padding: 10px;
+	
+}
+.ddMenu{
+  height:calc(1.5em + .5rem + 2px);
+  padding: .25rem 1.15rem;
+  font-size:.875rem;
+  line-height:.5;
+  border-radius:30px;
+  width: 50px;
+  padding-right: 0;
+  padding-left: 0px;
+  background-color: #bfbfbf;
+  text-align-last: center;
+  
+
+}
+
+.d-flex{
+	display:-ms-flexbox!important;
+	display:flex!important;
+	-ms-flex-pack:justify!important;
+	justify-content:space-between!important;
+	-ms-flex-align:center!important;
+	align-items:center!important;
+	padding-right:1rem!important;
+	padding-left:1rem!important;
+
+
+}
+
+
+
+
+
+
+h5{
+  text-align: center;
+  color: rgb(180, 180, 180);
+
+}
+h4{
+  text-align: center;
+  margin:0 0 0 0;
+  color: rgb(180, 180, 180);
+  
+}
+
+h3{
+	text-align: center;
+	margin-top: 5px;
+	margin-bottom: 15px;
+	color: white;
+	
+	
+  }
+
+h2{
+	margin-top: 5px;
+	margin-bottom: .5rem;
+	color: rgb(180, 180, 180);
+	font-size: small;
+	
+}
+
+h1{
+	margin-top: 0px;
+	margin-bottom: .5rem;
+	color: rgb(180, 180, 180);
+	font-size: small;
+	
+}
+
+
+/* Aoutobook Toggle
+============================================================ */
+.switch {
+	display: block;
+	padding: 5px 10px 20px 30px;
+		    
+}
+.switch h3 {
+	font-weight: normal;
+}
+.toggle {
+	position: absolute;
+	margin-left: -9999px;
+	visibility: hidden;
+		
+}
+
+.toggle input {
+	display: none;
+}
+
+.toggle + label {
+	display: block;
+	position: relative;
+	cursor: pointer;
+	border-radius: 60px;
+	padding: 2px;
+	width: 120px;
+	height: 30px;
+	overflow: hidden;
+	
+}
+.toggle + label:before, .toggle + label:after {
+	display: block;
+	border-radius: 60px;
+	position: absolute;
+	top: 1px;
+	left: 1px;
+	bottom: 1px;
+	padding: 10px;
+	
+}
+.toggle + label:before {
+	content: "On";
+	right: 1px;
+	background-color: #bfbfbf;
+	text-indent: -90px;
+	color: green;
+	
+	
+}
+.toggle + label:after {
+	content: "Off";
+	text-indent: 90px;
+	width: 20px;
+    color: red;
+	background-color: #fff;
+	margin: 1px;
+	box-shadow: 0 2px 5px rgba(000,000,000,0.2);
+	
+}
+
+
+
+/* SWITCH 
+============================================================ */
+.light-switch label {
+	background: #bfbfbf;
+	
+	
+}
+.light-switch label:after {
+	content: "Disabled";
+	position: absolute;
+	background-color: inherit;
+	box-shadow: none;
+	text-indent: 10px;
+	line-height: 10px;
+	
+	
+	
+	
+}
+.light-switch label:before {
+	content: "Enabled";
+    position: absolute;
+	border-radius: inherit;
+	text-indent: -250px;
+    line-height: 18px;
+	padding: 0;
+	width: 16%;
+	height: 20px;
+	left: 77%;
+	top: 17%;
+	z-index: 9;
+	background: radial-gradient(40% 35%, #ccc, red 60%);
+	box-shadow: inset 0 2px 4px 1px rgba(0,0,0,0.3), 0 1px 0 rgba(255,255,255,1), inset 0 1px 0 white;
+	
+	
+}
+.light-switch input:checked ~ label:before {
+	background: radial-gradient(40% 35%, #45b8f2, #27fc0f 60%);
+	box-shadow: inset 0 3px 5px 1px rgba(0,0,0,0.1), 0 1px 0 rgba(255,255,255,0.4), 0 0 10px 2px rgba(0, 136, 204, 0.5);
+	text-indent: -80px;
+	
+}
+.light-switch input:checked + label:after {
+	text-indent: -200px;
+	
+}
+/* Transition
+============================================================ */
+.toggle + label:before, .toggle + label:after {
+	transition: All 0.5s ease;
+	-webkit-transition: All 0.5s ease;
+	-moz-transition: All 0.5s ease;
+	-o-transition: All 0.5s ease;
+}
+

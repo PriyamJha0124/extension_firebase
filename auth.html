@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Security-Policy" content="default-src * self blob: data: gap:; style-src * self 'unsafe-inline' blob: data: gap:; script-src * 'self' 'unsafe-eval' 'unsafe-inline' blob: data: gap:; object-src * 'self' blob: data: gap:; img-src * self 'unsafe-inline' blob: data: gap:; connect-src self * 'unsafe-inline' blob: data: gap:; frame-src * self blob: data: gap:;">
+  <link rel="stylesheet" href="./auth.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+  <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-auth.js"></script>
+</head>
+<body>
+  <div class="cntr">
+    <h5 id='headingTxt'>Login</h5>
+    <hr style="margin-bottom: 20px;">
+    <div class="input-field">
+      <input id="email" type="text" class="validate white-text" autocomplete="off" value="">
+      <label for="email">Email Address</label>
+    </div>
+    <div class="input-field">
+      <input id="password" type="password" class="validate white-text" value="">
+      <label for="password" id='pswd-lbl'>Password</label>
+    </div>
+    <button id='loginBtn' class="btn"> Login </button>
+    <button id='signUpBtn' class='btn hide'> Sign Up </button>
+    <button id='resetBtn' class='btn hide'> Reset </button>
+    <div id='last-row'>
+      <div class="">
+        <p id='signUpSwitch'>Create Account</p>
+        <p id='loginSwitch' class="hide">Login</p>
+      </div>
+      <p id='forgotSwitch'>Forgot Password?</p>
+    </div>
+    
+  </div>
+
+  <script type="module" src="firebase.js" ></script>
+  <script src="auth.js" type="module"></script>
+</body>
+</html>

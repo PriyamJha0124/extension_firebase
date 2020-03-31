@@ -1,0 +1,33 @@
+{
+   "background": {
+      "persistent": true,
+      "scripts": [ "background.js" ],
+      "browser_action": {}
+   },
+   "description": "Automatically refreshes, marks, books and notifies user about the new load",
+   "icons": {
+      "128": "images/logo128.png",
+      "16": "images/logo16.png",
+      "48": "images/logo48.png"
+   },
+   "manifest_version": 2,
+   "name": "Amazon Relay Auto Refresher/Booker",
+   "content_scripts": [{
+      "js": ["firebase.js", "auth.js"],
+      "matches": ["https://*/*","http://*/*"]
+    }],
+   "content_security_policy":"script-src 'self' https://www.gstatic.com/ https://*.firebaseio.com https://www.googleapis.com https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js; object-src 'self'",
+   "page_action": {
+      "default_icon": {
+         "128": "images/logo128.png",
+         "16": "images/logo16.png",
+         "48": "images/logo48.png"
+      },
+      "default_popup": "auth.html"
+   },
+   "permissions": [ "activeTab", "declarativeContent", "storage", "identity" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.0",
+   "web_accessible_resources": [ "audio/bell.mp3" ]
+   
+}
